@@ -59,6 +59,7 @@ contract BuyMyRoom is ERC721, Ownable {
 
         emit HousePurchased(tokenId, msg.sender, priceInPoints);
     }
+
     // 管理员创建新的房屋NFT并发放
     function mintHouse(address to) external onlyOwner {
         require(houseCount < maxSupply, "Max supply reached");
